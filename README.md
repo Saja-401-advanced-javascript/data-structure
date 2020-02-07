@@ -1,17 +1,24 @@
-# Challenge Summary
-to merge two linked list together so the nodes alternate between the two lists.
+# Code Challenge 10
+
+## Stack and a Queue Implementation
+
+## Challenge Summary
+implement methods on the stacks and queues
 
 ## Challenge Description
-To write a function called mergeLists which takes two linked lists as arguments. merge the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. 
+to Write multi methods for the  stacks and queues that add, remove, peek or see if empty
 
 ## Approach & Efficiency
-thinking of a method to write the function in a simple way then test it for validation
+writting the methods then testing it
 
 ## Solution
-using while() then if() in order to solve the challenge and using two linked list examples to test the function.
+creat the functions then test them
 
-## Efficiency (Big O) 
-- **mergeLists(list1, list2)** : o(n);
+## Efficiency (Big O)
+- push: Constant — O(1)
+- pop: Constant — O(1)
+- peek: Constant — O(1)
+- empty: Constant — O(1)
 
-## Whiteboard:
-![](img/challenge08.jpg)
+## Whiteboard 
+![](img/challeng10.jpg)
