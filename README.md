@@ -1,17 +1,17 @@
 # Challenge Summary
-implement a new method on the linked list
+to merge two linked list together so the nodes alternate between the two lists.
 
 ## Challenge Description
-to Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. 
+To write a function called mergeLists which takes two linked lists as arguments. merge the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. 
 
 ## Approach & Efficiency
-writting the method then testing it
+thinking of a method to write the function in a simple way then test it for validation
 
 ## Solution
-creat the functions then test them
+using while() then if() in order to solve the challenge and using two linked list examples to test the function.
 
-## Efficiency (Big O)
-- **ll.kthFromEnd(k)** : o(n)
+## Efficiency (Big O) 
+- **mergeLists(list1, list2)** : o(n);
 
-## Whiteboard 
-![](img/challenge-7.jpg)
+## Whiteboard:
+![](img/challenge08.jpg)
