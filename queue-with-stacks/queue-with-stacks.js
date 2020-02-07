@@ -71,5 +71,6 @@ class Node {
     let a =new PseudoQueue
 a.enqueue(1)
 a.enqueue(2)
+a.dequeue()
 console.log('a : ', a);
     module.exports = PseudoQueue;

@@ -15,22 +15,22 @@ describe(`Test the numbers()`, () => {
         numbers.enqueue('2');
         numbers.enqueue('3');
         numbers.enqueue('4');
-        expect(numbers.isEmpty()).toBeFalsy();
+        expect(numbers.stack1.isEmpty()).toBeFalsy();
     });
 
 
   
 
     it('Can successfully dequeue off the stack', () => {
-      queue.enqueue(2);
-      queue.enqueue(8);
-      queue.enqueue(4);
-      queue.dequeue();
-      queue.dequeue();
-      queue.dequeue();
-      expect(queue.front).toBeNull();
-      expect(queue.rear).toBeNull();
-      expect(queue.isEmpty()).toBeTruthy();
+        let numbers = new PseudoQueue
+
+      numbers.enqueue(2);
+      numbers.enqueue(8);
+      numbers.enqueue(4);
+      numbers.dequeue();
+      numbers.dequeue();
+      numbers.dequeue();
+      expect(numbers.stack1.isEmpty()).toBeTruthy();
     });
 
 
