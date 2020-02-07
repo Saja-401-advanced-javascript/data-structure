@@ -1,17 +1,19 @@
-# Singly Linked List
-Creating methods that can be impleminting in a linked list
+# Challenge Summary
+to use linked list methods
 
-## Challenge
-to create three methods :
-Insert: to add a new node to a linked list
-Include : to search on a value whithin a linked list
-toString : to return the values of all the nodes in the linked list
+## Challenge Description
+using inserBefore and insertAfter methods to add values before anf after selected value in the linked list. 
 
 ## Approach & Efficiency
-creating the methods and testing them by running npm run test in the terminal.
+create two functions that implement the goals of the challenge
 
-insert()  : It is an O(1)
+## Solution
+creat the functions then test them
 
-includes() : It is an O(n)
+##  efficiency (Big O) 
+- **append(value)** : o(1)
+- **insertBefore(value, newVal)** : o(1)
+- **insertAfter(value, newVal)** : o(n)
 
-toString() : It is an O(n)
+## whiteboard
+![](img/challenge-06.jpg)
