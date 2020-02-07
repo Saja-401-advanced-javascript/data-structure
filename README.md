@@ -1,24 +1,14 @@
-# Code Challenge 10
+# Code Challenge 11
 
-## Stack and a Queue Implementation
+## PseudoQueue
 
 ## Challenge Summary
-implement methods on the stacks and queues
+Create a brand new PseudoQueue class. methods : enqueue , dequeue
 
 ## Challenge Description
-to Write multi methods for the  stacks and queues that add, remove, peek or see if empty
+Create a brand new PseudoQueue class.
 
-## Approach & Efficiency
-writting the methods then testing it
+ PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods: enqueue which inserts value into the PseudoQueue, using a first-in, first-out approach. dequeue which extracts a value from the PseudoQueue, using a first-in, first-out approach.
 
-## Solution
-creat the functions then test them
-
-## Efficiency (Big O)
-- push: Constant — O(1)
-- pop: Constant — O(1)
-- peek: Constant — O(1)
-- empty: Constant — O(1)
-
-## Whiteboard 
-![](img/challeng10.jpg)
+## Whiteboard
+![](img/challenge11.jpeg)
