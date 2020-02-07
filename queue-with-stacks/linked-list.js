@@ -100,19 +100,40 @@ class LinkedList {
       }
       currentNode = currentNode.next;
     }
+  }
 
+  kthFromEnd(k) {
+    let currentNode = this.head;
+    let length = 0;
+
+    while (currentNode) {
+      length++;
+      currentNode = currentNode.next;
+    }
+
+    let requiredNode = length - 1 - k;
+    if (requiredNode < 0 || k < 0) {
+      return 'Exception';
+    }
+
+    currentNode = this.head;
+
+    while (requiredNode > 0) {
+      requiredNode--;
+      currentNode = currentNode.next;
+    }
+
+    return currentNode.value;
   }
 
 
 }
 
-let saja = new LinkedList;
-saja.insert('tareq');
-saja.insert('Saja');
-saja.insert('maryam');
-// saja.append(55)
-saja.insertAfter('Saja', 'tameem');
-console.log('888888888', saja.toString());
+// let saja = new LinkedList;
+// saja.insert('tareq');
+// saja.insert('Saja');
+// saja.insert('maryam');
+// console.log('888888888', saja.kthFromEnd(5));
 
 
 
