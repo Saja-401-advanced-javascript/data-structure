@@ -1,11 +1,20 @@
-# Code Challenge 11
+# Code Challenge 12
 
-# Code Challenge: Class 12
-
-## Animal shilter
+## Code Challenge: Multi bracket validation
 
 ## Challenge Summary
-To creat a class and methods 
+the function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. 
 
 ## Challenge Description
-Create a class called animalShilte that enqueue and dequeue cats and dogs
+There are 3 types of brackets:
+
+Round Brackets : () 
+
+true Square Brackets : [] 
+
+ true Curly Brackets : {}
+
+ and the function should return true the brackets are balanced whithin a string.
+
+ ## Whiteboard 
+ ![](img/challenge12.jpeg)
