@@ -1,20 +1,19 @@
-# Code Challenge 12
+# Code Challenge 15
 
-## Code Challenge: Multi bracket validation
+## Code Challenge: Binary Tree and BST Implementation
 
 ## Challenge Summary
-the function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. 
+to create a binary tree class that has three methodes which are :
+- postOrder()
+- inOrder()
+- preOrder()
 
-## Challenge Description
-There are 3 types of brackets:
+to create a binary search tree class that has two methods :
+- add()
+- contains()
 
-Round Brackets : () 
-
-true Square Brackets : [] 
-
- true Curly Brackets : {}
-
- and the function should return true the brackets are balanced whithin a string.
+## bigO
+ the binary tree methods : O(n) becuase there will be iteration through the nodes 
 
  ## Whiteboard 
- ![](img/challenge12.jpeg)
+ ![](img/challenge15.jpeg)
