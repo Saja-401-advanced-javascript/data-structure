@@ -1,6 +1,6 @@
 
 
-let Animal = require('../queue-with-stacks/fifo-animal-shelter.js');
+let Animal = require('../challenge/fifo-animal-shelter.js');
 
 
 let catA = {
@@ -70,7 +70,7 @@ describe('Animal shelter', () => {
 
     animal.enqueue(catA);
     animal.enqueue(catB);
-    animal.dequeue({ kind: 'potato' });
+    animal.dequeue({ kind: 'fish' });
 
     expect(animal.cat[0].kind).toEqual('cat');
     expect(animal.cat[0].name).toEqual('lady');
