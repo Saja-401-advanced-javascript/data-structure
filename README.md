@@ -1,20 +1,17 @@
-# Code Challenge 12
-
-## Code Challenge: Multi bracket validation
+# Code Challenge 16
+## Code Challenge: fizz buzz tree
 
 ## Challenge Summary
-the function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. 
+The challnge test each value of the tree to change them into Fizz, Buzz, or FizzBuzz
 
-## Challenge Description
-There are 3 types of brackets:
+* If the value is divisible by 3, replace the value with “Fizz”
+* If the value is divisible by 5, replace the value with “Buzz”
+* If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
 
-Round Brackets : () 
 
-true Square Brackets : [] 
+## Approach & Efficiency
+This method takes Big O(n)
 
- true Curly Brackets : {}
+## Whiteboard
+![](img/challenge16.jpeg)
 
- and the function should return true the brackets are balanced whithin a string.
-
- ## Whiteboard 
- ![](img/challenge12.jpeg)
