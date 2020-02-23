@@ -1,19 +1,18 @@
-# Code Challenge 15
+Visual:
 
-## Code Challenge: Binary Tree and BST Implementation
 
-## Challenge Summary
-to create a binary tree class that has three methodes which are :
-- postOrder()
-- inOrder()
-- preOrder()
+| i | j         | temp[i] |  while  | arr[j+1] | j | arr[j]  | arr[j+1]| arr
+|---|:---------:|:-------:|:-------:|:--------:|:-:|:-------:|:-------:|-----------------|
+|1  | 0         | 4       | t&t=t   |arr[1]=8  |-1 |arr[0]=8 | -       |  -              |
+|1  | -1        | 4       | f&t = f | -        | - | -       |arr[0]=4 |[4,8,23,42,16,15]|
+|2  | 1         |23       |t&f=f    |        - |-  |-        | -       |[4,8,23,42,16,15]|
+|3  | 2         | 42      |t&f=f    | -        |-  | -       | -       |[4,8,23,42,16,15]|
+|4  | 3         | 16      |t&t =t   |arr[4]=42 |2  |arr[3]=42| -       |[4,8,23,42,42,15]|
+|4  |2          |16       |t&t=t    |arr[3]=23 |1  |arr[2]=23|         |[4,8,23,23,42,15]|
+|4  |1          |16       |t&f=f    |-         |-  | -       |arr[2]=16|[4,8,16,23,42,15]|
+|5  |4          |15       |t&t=t    |arr[5]=16 |3  |arr[4]=16|-        |[4,8,16,23,42,42]|
+|5  |3          |15       |t&f=f    |-         |-  |-        |arr[4]=15|[4,8,16,23,23,42]|
+|5  |2          |15       |t&t=t    |arr[3]=23 |1  |arr[2]=23|-        |[4,8,16,16,23,42]|
+|5  |1          |15       |t$f=f    |arr[2]=4  |0  |arr[1]=4 |-        |[4,8,15,16,23,42]|
 
-to create a binary search tree class that has two methods :
-- add()
-- contains()
 
-## bigO
- the binary tree methods : O(n) becuase there will be iteration through the nodes 
-
- ## Whiteboard 
- ![](img/challenge15.jpeg)
