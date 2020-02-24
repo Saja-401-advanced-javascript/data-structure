@@ -1,6 +1,6 @@
-# Code Challenge 26
+# Code Challenge 27
 
-## Code Challenge: Insertion Sort
+## Code Challenge: Merge Sort
 
 ## Challenge Summary
 to iterate through a Pseudocode to know what should happen in each step.

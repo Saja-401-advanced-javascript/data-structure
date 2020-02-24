@@ -1,18 +1,36 @@
-Visual:
+testing array = [8,4,23,42,16,15]
+n = arr.length = 6
+
+if(n>1) ====> true
+mid = 6/2 => 3
+
+### first pass
+left = [4]
+right = [23]
+comparing left=>[4] with right=>[23] then sorting them => merge =[4,23].
+
+### second pass 
+left = [8]
+right = [4,23]
+comparing left=>[8] with right=>[4,23] then sorting them => merge =[4,8,23].
 
 
-| i | j         | temp[i] |  while  | arr[j+1] | j | arr[j]  | arr[j+1]| arr
-|---|:---------:|:-------:|:-------:|:--------:|:-:|:-------:|:-------:|-----------------|
-|1  | 0         | 4       | t&t=t   |arr[1]=8  |-1 |arr[0]=8 | -       |  -              |
-|1  | -1        | 4       | f&t = f | -        | - | -       |arr[0]=4 |[4,8,23,42,16,15]|
-|2  | 1         |23       |t&f=f    |        - |-  |-        | -       |[4,8,23,42,16,15]|
-|3  | 2         | 42      |t&f=f    | -        |-  | -       | -       |[4,8,23,42,16,15]|
-|4  | 3         | 16      |t&t =t   |arr[4]=42 |2  |arr[3]=42| -       |[4,8,23,42,42,15]|
-|4  |2          |16       |t&t=t    |arr[3]=23 |1  |arr[2]=23|         |[4,8,23,23,42,15]|
-|4  |1          |16       |t&f=f    |-         |-  | -       |arr[2]=16|[4,8,16,23,42,15]|
-|5  |4          |15       |t&t=t    |arr[5]=16 |3  |arr[4]=16|-        |[4,8,16,23,42,42]|
-|5  |3          |15       |t&f=f    |-         |-  |-        |arr[4]=15|[4,8,16,23,23,42]|
-|5  |2          |15       |t&t=t    |arr[3]=23 |1  |arr[2]=23|-        |[4,8,16,16,23,42]|
-|5  |1          |15       |t$f=f    |arr[2]=4  |0  |arr[1]=4 |-        |[4,8,15,16,23,42]|
+### third pass 
+left = [16]
+right = [15]
+comparing left=>[16] with right=>[15] then sorting them => merge =[15,16].
 
 
+### fourth pass 
+left = [42]
+right = [15,16]
+comparing left=>[16] with right=>[15] then sorting them => merge =[15,16,42].
+
+
+### fifth pass 
+left = [4,8,23]
+right = [15,16,42]
+comparing left=>[4,8,23] with right=>[15,16,42] then sorting them => merge =[4,8,15,16,23,42].
+
+### result 
+[4,8,15,16,23,42]
