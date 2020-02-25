@@ -1,38 +1,50 @@
 'use strict';
+const {BinarySearchTree, BinaryTree, Node, Queue} = require('../lib/tree.js');
 
-let {Node, BinaryTree, BinarySearchTree} = require('../lib/tree.js')
 
-describe('Breadth first', ()=>{
-    let tree = null;
-  
-      let node1 = new BreadthfirstTraversal.Node(2);
-      let node2 = new BreadthfirstTraversal.Node(7);
-      let node3 = new BreadthfirstTraversal.Node(5);
-      let node4 = new BreadthfirstTraversal.Node(2);
-      let node5 = new BreadthfirstTraversal.Node(6);
-      let node6 = new BreadthfirstTraversal.Node(9);
-      let node7 = new BreadthfirstTraversal.Node(5);
-      let node8 = new BreadthfirstTraversal.Node(11);
-      let node9 = new BreadthfirstTraversal.Node(4);
-  
-  
-      node1.left = node2;
-      node1.right = node3;
-      node2.left = node4;
-      node2.right = node5;
-      node5.left = node7;
-      node5.right = node8;
-      node3.right = node6;
-      node6.left = node9;
-  
-  
-      tree = new BinaryTree(node1);
-      console.log('8888', tree);
+describe(`tree traversal`, () => {
       
-  
- 
-    it('it should traversal as breadth in Binary search tree', ()=>{
-      expect(tree.breadthTraversal()).toEqual([2,7,5,2,6,9,5,11,4]);
-    });
-  
+  it('Can successfully instantiate an empty tree', () => {
+    const tree = new BinarySearchTree();
+    expect(tree.root).toBe(null);
   });
+
+  it('Can successfully instantiate a tree with a single root node', () => {
+    const tree = new BinarySearchTree(10);
+    expect(tree.root.value).toBe(10);
+  });
+
+  it('Can successfully print the values in a breadth first fashion', () => {
+    const tree = new BinarySearchTree(null);
+    tree.add(10);
+    tree.add(5);
+    tree.add(2);
+    tree.add(7);
+    tree.add(15);
+    tree.add(12);
+    console.log('this is the test log', tree.breadthFirstTraversal(tree.root)[0]);
+    expect(tree.breadthFirstTraversal(tree.root)[0]).toBe(10);
+    expect(tree.breadthFirstTraversal(tree.root)[1]).toBe(5);
+    expect(tree.breadthFirstTraversal(tree.root)[2]).toBe(15);
+    expect(tree.breadthFirstTraversal(tree.root)[3]).toBe(2);
+    expect(tree.breadthFirstTraversal(tree.root)[4]).toBe(7);
+    expect(tree.breadthFirstTraversal(tree.root)[5]).toBe(12);
+  });
+
+  it('Can successfully print the values in a breadth first fashion with different numbers', () => {
+    const tree = new BinarySearchTree(null);
+    tree.add(11);
+    tree.add(6);
+    tree.add(3);
+    tree.add(8);
+    tree.add(16);
+    tree.add(13);
+    console.log('this is the test log', tree.breadthFirstTraversal(tree.root)[0]);
+    expect(tree.breadthFirstTraversal(tree.root)[0]).toBe(11);
+    expect(tree.breadthFirstTraversal(tree.root)[1]).toBe(6);
+    expect(tree.breadthFirstTraversal(tree.root)[2]).toBe(16);
+    expect(tree.breadthFirstTraversal(tree.root)[3]).toBe(3);
+    expect(tree.breadthFirstTraversal(tree.root)[4]).toBe(8);
+    expect(tree.breadthFirstTraversal(tree.root)[5]).toBe(13);
+  });
+});
