@@ -1,98 +1,40 @@
+'use strict ';
 
+const findMaximumValue = require('../lib/tree.js');
 
-let {Node, BinaryTree} = require('../lib/tree.js');
+describe('Find Maximum Binary Tree Module', ()=>{
+  let tree2 = null;
+  let tree3 = null;
+  beforeAll(()=>{
+    let node1 = new findMaximumValue.Node(2);
+    let node2 = new findMaximumValue.Node(7);
+    let node3 = new findMaximumValue.Node(5);
+    let node4 = new findMaximumValue.Node(2);
+    let node5 = new findMaximumValue.Node(6);
+    let node6 = new findMaximumValue.Node(9);
+    let node7 = new findMaximumValue.Node(5);
+    let node8 = new findMaximumValue.Node(11);
+    let node9 = new findMaximumValue.Node(4);
 
+    node1.left = node2;
+    node1.right = node3;
+    node2.left = node4;
+    node2.right = node5;
+    node5.left = node7;
+    node5.right = node8;
+    node3.right = node6;
+    node6.left = node9;
 
-describe('the Binary tree', () => {
-
-  beforeAll(() => {
-    let nodeA = new Node('saja');
-    let nodeB = new Node('tareq');
-    let nodeC = new Node('maryam');
-    let nodeD = new Node('tameem');
-    let nodeE = new Node('marya');
-
-    nodeA.leftChild = nodeB;
-    nodeA.rightChild = nodeC;
-    nodeC.leftChild = nodeD;
-    nodeC.rightChild = nodeE;
-
-
+    tree2 = new findMaximumValue.BinaryTreeMaxValue(node1);
+    tree3 = new findMaximumValue.BinaryTreeMaxValue(node3);
+  });
+  it('it should return the maximum value stored in the tree1 (9)', ()=>{
+    console.log(tree3.findMaximumValue());
+    expect(tree3.findMaximumValue()).toEqual(9);
+  });
+  it('it should return the maximum value stored in the tree (11)', ()=>{
+    console.log(tree2.findMaximumValue());
+    expect(tree2.findMaximumValue()).toEqual(11);
   });
 
-  it ('Can successfully instantiate an empty tree', () => {
-    let tree = new BinaryTree;
-    expect(tree.root).toBeNull();
-  });
-
-  it ('Can successfully instantiate a tree with a single root node', () => {
-    let tree = new BinaryTree('saja');
-    expect(tree.root).toEqual('saja');
-  });
-
-  it ('Can successfully add a left child and right child to a single root node', () => {
-    let nodeA = new Node('saja');
-    let nodeB = new Node('tareq');
-    let nodeC = new Node('maryam');
-    let tree = new BinaryTree(nodeA);
-
-    tree.leftChild = nodeB;
-    tree.rightChild = nodeC;
-
-    expect(tree.leftChild.value).toEqual('tareq');
-    expect(tree.rightChild.value).toEqual('maryam');
-
-  });
-
-
-  it ('Can successfully return a collection from a preorder traversal', () => {
-    let nodeA = new Node('saja');
-    let nodeB = new Node('tareq');
-    let nodeC = new Node('maryam');
-    let nodeD = new Node('tameem');
-    let nodeE = new Node('marya');
-
-    nodeA.leftChild = nodeB;
-    nodeA.rightChild = nodeC;
-    nodeC.leftChild = nodeD;
-    nodeC.rightChild = nodeE;
-
-    let tree = new BinaryTree(nodeA);
-    expect(tree.preOrder()).toEqual(['saja','tareq', 'maryam','tameem','marya']);
-
-  });
-
-  it ('Can successfully return a collection from an inorder traversal', () => {
-    let nodeA = new Node('saja');
-    let nodeB = new Node('tareq');
-    let nodeC = new Node('maryam');
-    let nodeD = new Node('tameem');
-    let nodeE = new Node('marya');
-
-    nodeA.leftChild = nodeB;
-    nodeA.rightChild = nodeC;
-    nodeC.leftChild = nodeD;
-    nodeC.rightChild = nodeE;
-
-    let tree = new BinaryTree(nodeA);
-    expect(tree.inOrder()).toEqual(['tareq', 'saja','tameem','maryam','marya']);
-
-  });
-
-  it ('Can successfully return a collection from a postorder traversal', () => {
-    let nodeA = new Node('saja');
-    let nodeB = new Node('tareq');
-    let nodeC = new Node('maryam');
-    let nodeD = new Node('tameem');
-    let nodeE = new Node('marya');
-
-    nodeA.leftChild = nodeB;
-    nodeA.rightChild = nodeC;
-    nodeC.leftChild = nodeD;
-    nodeC.rightChild = nodeE;
-
-    let tree = new BinaryTree(nodeA);
-    expect(tree.postOrder()).toEqual(['tareq','tameem','marya','maryam', 'saja']);
-
-  });
 });
